@@ -1,9 +1,19 @@
 $color-rosa: #dd969c;
 $color-blanco: #ffffff;
+$color-gris: #757575;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.text-pink {
+  color: #dd969c;
+}
+
+.text-gray {
+  color: $color-gris;
 }
 
 #banner {
@@ -19,9 +29,10 @@ $color-blanco: #ffffff;
 .banner {
   background-image: url("../img/rg-xv-foto-rosa-1-s.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position-y: -400px;
   background-size: cover;
-  &::before{
+
+  &::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -29,6 +40,7 @@ $color-blanco: #ffffff;
     opacity: .5;
     position: absolute;
   }
+
   img {
     z-index: 0;
   }
@@ -45,12 +57,54 @@ h1 {
   color: $color-blanco;
 }
 
-.bg-flores{
-    height: 550px;
-    background-image: url("../img/rg-cerezo-flores-top.png");
-    background-repeat: repeat-x;
-    background-position: top;
-    display: flex;
-    align-items: center;
-    // background-size: cover;
+.bg-flores {
+  height: 550px;
+  background-image: url("../img/rg-cerezo-flores-top.png");
+  background-repeat: repeat-x;
+  background-position-y: -100px;
+  display: flex;
+  align-items: center;
+  // background-size: cover;
+}
+
+.bg-img {
+  height: 650px;
+  background-image: url("../img/rg-xv-foto-rosa-4-s.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  backdrop-filter: blur(10px) !important;
+
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #121212;
+    opacity: .5;
+    position: absolute;
+  }
+
+}
+
+.padrinos {
+  height: auto;
+  background-image: url("../img/rg-background-rosa-destellos-h.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-blur{
+  background: transparent!important;
+  // border: 1px solid $color-gris !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  overflow: hidden;
+
 }

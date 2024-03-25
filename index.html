@@ -20,7 +20,7 @@
             <div class="col-12">
                 <img src="img/rg-cerezo-frame.png" alt="" class="position-absolute top-50 start-50 translate-middle">
                 <div class="position-absolute top-50 start-50 translate-middle">
-                    <h1 class="display-1">Alisson Yue Vázquez Castro</h1>
+                    <h1 class="display-6 text-white">Alisson Yue <br> Vázquez Castro</h1>
                 </div>
 
             </div>
@@ -30,12 +30,13 @@
             <h4 class="text-center">
                 Mis XV
             </h4>
-            
+
             <div class="card">
                 <div class="card-body text-center bg-pl">
                     <h3>25|05|24</h3>
                 </div>
             </div>
+            <br>
         </div>
     </div>
 
@@ -44,7 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="fs-2">Hoy guardo en mis brazos la estrella divina que fue mi niñez.
+                    <p class="fs-2 text-center">Hoy guardo en mis brazos la estrella divina que fue mi niñez.
                         Y hoy, mi adolescencia con alas de ángel se eleva hacia el cielo por primera vez.
                         Por eso quiero compartir con mis padres y contigo mis Quince Años.</p>
                 </div>
@@ -53,28 +54,95 @@
     </section>
 
 
-    <section>
+    <section class="bg-img">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 "></div>
+                <div class="col-lg-12">
+
+                </div>
             </div>
         </div>
     </section>
 
 
-    <section>
+    <section class="padrinos">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 "></div>
+                <div class="col-lg-12 text-center my-5">
+                    <img src="img/rg-cerezo-flores-top-left.png" alt="" style="width: 200px; margin-top: -100px;">
+
+
+                    <p class="text-pink fs-2">Con la bendición de Dios y el amor de mis padres:</p>
+                    <br>
+                    <h3 class="color-gray fs-3">Candelaria Sánchez</h3>
+                    <br>
+
+                    <p class="text-pink display-2 fw-bold">&</p>
+                    <br>
+
+                    <h3 class="text-gray fs-3">Ángel Vidal</h3>
+                    <br>
+
+                    <img src="img/rg-cerezo-flores-1.png" alt="">
+                    <br>
+
+                    <p class="text-pink fs-3">Mis padrinos de Velación</p>
+                    <br>
+
+                    <h3 class="text-gray fs-3">Leticia Castillo</h3>
+                    <br>
+
+                    <h3 class="text-gray fs-3">Julio César Alcocer</h3>
+
+
+                </div>
             </div>
         </div>
     </section>
 
 
-    <section>
+    <section class="bg-img">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 "></div>
+                <div class="col-lg-12">
+
+                    <div class="col-lg-10 card card-blur position-absolute top-50 start-50 translate-middle">
+                        <div class="card-body text-center my-5">
+
+                            <img src="img/rg-cerezo-flores-top-left.png" alt="" class="position-absolute top-0 start-0" style="width: 150px; margin-left: -50px;">
+                            <img src="img/rg-cerezo-flores-bottom-right.png" alt="" class="position-absolute bottom-0 end-0" style="width: 150px; margin-right: -50px;">
+                            
+                            <h4 class="text-pink">17 de diciembre de 2021</h4>
+                            <img src="img/rg-cerezo-flores-1.png" alt="">
+                            <h4 class="text-white my-4">Sólo faltan:</h4>
+
+                            <div id="countdown" class="d-flex justify-content-center my-4">
+
+                                <div>
+                                    <div class="display-5 text-white mx-5" id="days"></div>
+                                    <p class="fs-4 text-white">Días</p>
+                                </div>
+                                <div>
+                                    <div class="display-5 text-white mx-5" id="hours"></div>
+                                    <p class="fs-4 text-white">Horas</p>
+                                </div>
+                                <div>
+                                    <div class="display-5 text-white mx-5" id="minutes"></div>
+                                    <p class="fs-4 text-white">Minutos</p>
+                                </div>
+                                <div>
+                                    <div class="display-5 text-white mx-5" id="seconds"></div>
+                                    <p class="fs-4 text-white">Segundos</p>
+                                </div>
+
+
+                            </div>
+                            <div>
+                                <button class="btn btn-lg bg-pl">¡Asistire!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -156,7 +224,30 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
+    <script>
+        // Función para contar tiempo restante hasta una fecha específica (ejemplo: tus XV años)
+        function countdown() {
+            const targetDate = new Date('2024-06-01'); // Fecha objetivo (ejemplo)
+            const now = new Date();
+            const difference = targetDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        // Actualizar contador cada segundo
+        setInterval(countdown, 1000);
+    </script>
 
 </body>
+
+
 
 </html>
