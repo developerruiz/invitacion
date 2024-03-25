@@ -1,7 +1,59 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Estilos adicionales */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  /* Modificado para estar en la parte inferior */
+  right: 20px;
+  z-index: 1000;
+}
+
+.content {
+  text-align: center;
+}
+
+.welcome-screen {
+  background-image: url("../img/textura_inicio.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000 !important; /* Asegúrate de que esté por encima de tu contenido principal */
+}
+
+/* Estilos para la animación de la cortina hacia arriba */
+.welcome-screen.slide-up {
+  animation: slideUp 1s ease forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+#playPauseButton:active {
+  background-color: #795f32 !important; /* Cambia el color de fondo cuando el botón está activo */
+  border-color: #795f32 !important; /* Cambia el color del borde cuando el botón está activo */
+}
+
+#playPauseButton:focus {
+  background-color: #795f32 !important; /* Cambia el color de fondo cuando el botón está activo */
+  border-color: #795f32 !important; /* Cambia el color del borde cuando el botón está activo */
 }
 
 .text-pink {
@@ -40,6 +92,11 @@
   z-index: 0;
 }
 
+@media screen and (max-width: 575px) {
+  .banner {
+    background-position-y: 0;
+  }
+}
 /* Estilos para el texto del banner */
 h1 {
   text-align: center;
@@ -61,7 +118,7 @@ h1 {
 }
 
 .bg-img {
-  height: 650px;
+  height: 1450px;
   background-image: url("../img/rg-xv-foto-rosa-4-s.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -97,4 +154,73 @@ h1 {
           backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   overflow: hidden;
+}
+
+.bg-lugar {
+  height: 100%;
+  background-image: url("../img/rg-cerezo-flores-top.png");
+  background-repeat: repeat-x;
+  background-position-y: -100px;
+  display: flex;
+  align-items: center;
+}
+
+.img-ceremonia {
+  height: 340px !important;
+  background-image: url("../img/ana-paola-templo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inputform {
+  border: #dd969c !important;
+}
+
+.btn-pink {
+  background: #dd969c !important;
+  border: 1px solid #c9888d !important;
+}
+.btn-pink:hover {
+  background: #c9888d !important;
+}
+.btn-pink:active {
+  background-color: #dd969c !important;
+  border: 1px solid #c9888d !important;
+}
+.btn-pink:focus {
+  background-color: #dd969c !important;
+  border: 1px solid #c9888d !important;
+}
+
+.rounded-circle {
+  border: 5px solid #c9888d !important;
+}
+
+.bg-fotos {
+  height: 100%;
+  background-image: url("../img/rg-cerezo-flores-top.png");
+  background-repeat: repeat-x;
+  background-position-y: -100px;
+  display: flex;
+  align-items: center;
+  padding: 130px 0;
+}
+
+.bg-img-2 {
+  height: 1450px;
+  background-image: url("../img/rg-xv-foto-rosa-6-s.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-backdrop-filter: blur(10px) !important;
+          backdrop-filter: blur(10px) !important;
+}
+.bg-img-2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  opacity: 0.5;
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */
