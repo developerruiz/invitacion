@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#banner {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner {
+  background-image: url("../img/rg-xv-foto-rosa-1-s.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.banner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  opacity: 0.5;
+  position: absolute;
+}
+.banner img {
+  z-index: 0;
+}
+
+/* Estilos para el texto del banner */
+h1 {
+  text-align: center;
+  z-index: 1 !important;
+}
+
+.bg-pl {
+  background: #dd969c !important;
+  color: #ffffff;
+}
+
+.bg-flores {
+  height: 550px;
+  background-image: url("../img/rg-cerezo-flores-top.png");
+  background-repeat: repeat-x;
+  background-position: top;
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
